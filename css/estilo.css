@@ -1,0 +1,106 @@
+*{ margin: 0; padding: 0;}
+.imgFluid{width: 100%;}
+@font-face {
+	font-family: "pumpkin";
+	src: url("../assets/fonts/pumpkin.ttf");
+}
+@font-face {
+	font-family: "happy";
+	src: url("../assets/fonts/happy.ttf");
+}
+
+
+
+/* vista mobile */
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+	.gridContainer {
+		display: grid;
+		grid-template-areas: 
+		"header header"
+		"nav nav"
+		"p p"
+		"footer footer";
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 100px 70px auto 1fr 100px;
+	}
+	header{grid-area: header; display: flex; justify-content: center;}
+	.nav{grid-area: nav;}
+	.nav ul {display: flex;}
+	li {padding: 10px; list-style-type: none;}
+	p{grid-area: p;}
+	footer{grid-area: footer;display: flex;justify-content: space-around;}
+	
+
+	
+		.tiendaContainerGrid {
+		display: grid;
+		grid-template-areas: 
+		"header header"
+		"nav nav"
+		"imgFlex imgFlex"
+		"footer footer";
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 100px 70px auto 1fr 100px;
+	}
+	header{grid-area: header; display: flex; justify-content: center;}
+	.nav{grid-area: nav;}
+	.nav ul {display: flex;}
+	li {padding: 10px; list-style-type: none;}
+	div.imgFlex{grid-area: imgFlex;}
+	.imgServicios{width: 100%; height: auto;}
+	footer{grid-area: footer;display: flex;justify-content: space-around;padding-top: 20px;}
+}
+/* vista desktop */
+
+@media only screen and (min-width: 768px){
+	.gridContainer {
+		display: grid;
+		grid-template-areas: 
+		"header header header"
+		"nav nav nav"
+		"p p p"
+		"footer footer footer";
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 100px 70px auto 1fr 100px;
+	}
+	header{grid-area: header; display: flex; justify-content: center;}
+	.nav{grid-area: nav;}
+	.nav ul {display: flex;}
+	li a {padding: 40px; list-style-type: none; list-style: none; font-family: "pumpkin"; font-size: 40px; color: #acabac;} 
+	footer{grid-area: footer; display: flex; justify-content: space-around;}
+    h3	{padding: 100px; display: flex;}
+    .texto{grid-area: p;}
+    p {padding: 10px; font-family: "happy"; font-size: 25px;}
+    .avion {width: 20%; height: 80%;}
+    .envios{transform: translate(-140px); font-family: "happy"; font-size:40px; color: #8b8989;}
+    .pagos{transform: translate(-70px); font-family: "happy"; font-size:40px; color: #8b8989;}
+   
+
+
+	.tiendaContainerGrid {
+		display: grid;
+		grid-template-areas: 
+		"header header header"
+		"nav nav nav"
+		"imgFlex imgFlex imgFlex"
+		"section section section";
+		grid-template-columns: 33.3% 33.3% 33.3%;
+		grid-template-rows: 100px 70px auto 100px;
+	}
+	header{grid-area: header; display: flex; justify-content: center;}
+	.nav{grid-area: nav;}
+	.nav ul {display: flex;}
+	li {padding: 10px; list-style-type: none;}
+	div.imgFlex{grid-area: imgFlex; display: flex; flex-wrap: nowrap; justify-content: space-around;}
+	.imgServicios{width: 20%; height: auto;}
+	section article {grid-area: section;}
+	.texto{background-color: #e2d6d6;}
+	input {transition: all 2s;}
+	input:focus {width: 100px; font-size: 24px;}
+	.imgServicios{transition: transform 2s;}
+	.imgServicios: {transform: scale(2);}
+	.preguntas, .respuestas {background-color: #e2d6d6; padding: 10px; font-family: "pumpkin"; font-size: 30px;}
+	.dudas{font-size: "happy"; font-size: 30px; color: #646c65;}
+	
+}
